@@ -52,6 +52,27 @@ The application starts at `http://localhost:8000`. Interactive OpenAPI documenta
 
 ---
 
+## Project Structure
+```text
+rag-production-agent/
+├── data/                       # Raw input documents for LlamaIndex
+│   └── architecture_guide.txt
+├── docs/                       # Documentation image
+│   └── image.png
+├── src/
+│   ├── config.py               # Environment configuration
+│   ├── ingestion.py            # LlamaIndex reader, chunker & index builder
+│   ├── tools.py                # LangChain tool wrapper around LlamaIndex
+│   ├── graph.py                # LangGraph stateful agent workflow
+│   └── main.py                 # FastAPI application endpoints
+├── .env.example                # Example environment variable file
+├── Dockerfile                  # Production container definition
+├── requirements.txt            # Python dependencies
+└── README.md                   # Setup guide and API documentation
+```
+
+---
+
 ## Testing the Query Endpoint
 
 Execute a test query using `curl`:
@@ -87,19 +108,3 @@ curl http://localhost:8000/health
 
 ---
 
-## Project Structure
-```text
-rag-production-agent/
-├── data/                       # Raw input documents for LlamaIndex
-│   └── architecture_guide.txt
-├── src/
-│   ├── config.py               # Environment configuration
-│   ├── ingestion.py            # LlamaIndex reader, chunker & index builder
-│   ├── tools.py                # LangChain tool wrapper around LlamaIndex
-│   ├── graph.py                # LangGraph stateful agent workflow
-│   └── main.py                 # FastAPI application endpoints
-├── .env.example                # Example environment variable file
-├── Dockerfile                  # Production container definition
-├── requirements.txt            # Python dependencies
-└── README.md                   # Setup guide and API documentation
-```
