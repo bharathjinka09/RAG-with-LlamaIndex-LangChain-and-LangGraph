@@ -2,6 +2,11 @@
 
 An enterprise-ready Retrieval-Augmented Generation (RAG) system combining **LlamaIndex**, **LangChain**, and **LangGraph**.
 
+## Architecture Overview
+
+![LangChain vs LangGraph vs LlamaIndex](docs/image.png)
+
+
 - **LlamaIndex**: High-performance data ingestion, parsing, chunking, and local vector indexing.
 - **LangChain**: Unified abstractions, tool schema generation, and LLM integrations.
 - **LangGraph**: Stateful graph-based orchestration with tool-calling loops and routing.
