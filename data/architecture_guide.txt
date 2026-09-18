@@ -1,0 +1,4 @@
+Project Titan:
+Project Titan is an internal enterprise distributed computing architecture developed in 2025.
+It leverages zero-copy memory transfers and uses eBPF for network path optimization.
+The SLA target for Titan's P99 latency is sub-12 milliseconds.
